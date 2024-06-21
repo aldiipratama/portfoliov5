@@ -3,23 +3,9 @@ import { Button } from './ui/button'
 import Link from 'next/link'
 import { Github, Instagram, Linkedin } from 'lucide-react'
 import { Typed1, Typed2 } from './ui/Typed'
+import { mediaList } from '@/lib/constants'
 
 export const Footer = () => {
-  const mediaList = [
-    {
-      icon: Github,
-      link: "https://github.com/aldiipratama"
-    },
-    {
-      icon: Instagram,
-      link: "https://instagram.com/alx.dyy"
-    },
-    {
-      icon: Linkedin,
-      link: "https://linkedin.com/in/aldi-pratama-a21b61295"
-    },
-  ]
-
   return (
     <footer className='border-t-2 dark:border-white border-black mt-10'>
       <div className='container flex justify-between mt-5 max-[512px]:flex-col max-[512px]:gap-10'>

@@ -1,8 +1,10 @@
-import { ReactElement } from "react";
+import { ForwardRefExoticComponent, ReactElement, RefAttributes } from "react";
 import { FaReact } from "react-icons/fa";
 import { SiNextdotjs, SiVite, SiTailwindcss, SiPhp, SiJavascript, SiTypescript, SiCodeigniter, SiAstro, SiExpress, SiJquery, SiMysql, SiSupabase, SiFlutter, SiDart, SiChakraui, SiShadcnui, SiAdobepremierepro } from "react-icons/si"
 import { FaHtml5, FaCss3Alt, FaLaravel, FaNodeJs, FaBootstrap, FaGitAlt, FaPython, FaFigma, FaJava } from "react-icons/fa"
 import { GiTurtle } from "react-icons/gi"
+import { IconType } from "react-icons/lib";
+import { Github, Instagram, Linkedin, LucideProps } from "lucide-react";
 
 interface navList {
   label: string
@@ -243,4 +245,24 @@ export const projectItems: projects[] = [
     thumbnail: '/project8.png',
     link: 'https://ai-dyy.netlify.app',
   }
+]
+
+interface mediaList {
+  icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>
+  link: string
+}
+
+export const mediaList: mediaList[] = [
+  {
+    icon: Github,
+    link: "https://github.com/aldiipratama"
+  },
+  {
+    icon: Instagram,
+    link: "https://instagram.com/alx.dyy"
+  },
+  {
+    icon: Linkedin,
+    link: "https://linkedin.com/in/aldi-pratama-a21b61295"
+  },
 ]

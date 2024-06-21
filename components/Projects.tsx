@@ -1,4 +1,3 @@
-import { ReactNode } from "react"
 import { HeroParallax } from "./ui/hero-parallax"
 import Link from "next/link"
 import { Button } from "./ui/button"
