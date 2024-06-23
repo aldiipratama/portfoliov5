@@ -1,202 +1,232 @@
 import { ForwardRefExoticComponent, ReactElement, RefAttributes } from "react";
 import { FaReact } from "react-icons/fa";
-import { SiNextdotjs, SiVite, SiTailwindcss, SiPhp, SiJavascript, SiTypescript, SiCodeigniter, SiAstro, SiExpress, SiJquery, SiMysql, SiSupabase, SiFlutter, SiDart, SiChakraui, SiShadcnui, SiAdobepremierepro } from "react-icons/si"
-import { FaHtml5, FaCss3Alt, FaLaravel, FaNodeJs, FaBootstrap, FaGitAlt, FaPython, FaFigma, FaJava } from "react-icons/fa"
-import { GiTurtle } from "react-icons/gi"
+import {
+  SiNextdotjs,
+  SiVite,
+  SiTailwindcss,
+  SiPhp,
+  SiJavascript,
+  SiTypescript,
+  SiCodeigniter,
+  SiAstro,
+  SiExpress,
+  SiJquery,
+  SiMysql,
+  SiSupabase,
+  SiFlutter,
+  SiDart,
+  SiChakraui,
+  SiShadcnui,
+  SiAdobepremierepro,
+  SiPostgresql,
+  SiMongodb,
+} from "react-icons/si";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaLaravel,
+  FaNodeJs,
+  FaBootstrap,
+  FaGitAlt,
+  FaPython,
+  FaFigma,
+  FaJava,
+} from "react-icons/fa";
+import { GiTurtle } from "react-icons/gi";
 import { IconType } from "react-icons/lib";
 import { Github, Instagram, Linkedin, LucideProps } from "lucide-react";
 
 interface navList {
-  label: string
-  link: string
+  label: string;
+  link: string;
 }
 
 export const navbarList: navList[] = [
   {
     label: "Home",
-    link: "home"
+    link: "home",
   },
   {
     label: "Projects",
-    link: "projects"
+    link: "projects",
   },
   {
     label: "Skills",
-    link: "skills"
+    link: "skills",
   },
   {
     label: "About",
-    link: "about"
+    link: "about",
   },
   {
     label: "Contact",
-    link: "contact"
+    link: "contact",
   },
-]
+];
 
 interface skills {
-  title: string
-  icon: ReactElement
-  link: string
+  title: string;
+  icon: ReactElement;
+  link: string;
 }
 
 export const skillItems: skills[] = [
   {
-    title: 'HTML',
+    title: "HTML",
     icon: <FaHtml5 size={50} />,
-    link: 'https://id.wikipedia.org/wiki/HTML'
+    link: "https://id.wikipedia.org/wiki/HTML",
   },
   {
-    title: 'CSS',
+    title: "CSS",
     icon: <FaCss3Alt size={50} />,
-    link: 'https://en.wikipedia.org/wiki/CSS'
+    link: "https://en.wikipedia.org/wiki/CSS",
   },
   {
-    title: 'Typescript',
+    title: "Typescript",
     icon: <SiTypescript size={50} />,
-    link: 'https://www.typescriptlang.org/'
+    link: "https://www.typescriptlang.org/",
   },
   {
-    title: 'React',
+    title: "React",
     icon: <FaReact size={50} />,
-    link: 'https://react.dev'
+    link: "https://react.dev",
   },
   {
-    title: 'NextJS',
+    title: "NextJS",
     icon: <SiNextdotjs size={50} />,
-    link: 'https://nextjs.org'
+    link: "https://nextjs.org",
   },
   {
-    title: 'NodeJS',
+    title: "NodeJS",
     icon: <FaNodeJs size={50} />,
-    link: 'https://nodejs.org/'
+    link: "https://nodejs.org/",
   },
   {
-    title: 'Jquery',
+    title: "Jquery",
     icon: <SiJquery size={50} />,
-    link: 'https://jquery.com/'
+    link: "https://jquery.com/",
   },
   {
-    title: 'TailwindCSS',
+    title: "TailwindCSS",
     icon: <SiTailwindcss size={50} />,
-    link: 'https://tailwindcss.com'
+    link: "https://tailwindcss.com",
   },
   {
-    title: 'Javascript',
+    title: "Javascript",
     icon: <SiJavascript size={50} />,
-    link: 'https://www.javascript.com/'
+    link: "https://www.javascript.com/",
   },
   {
-    title: 'ViteJS',
+    title: "ViteJS",
     icon: <SiVite size={50} />,
-    link: 'https://vitejs.dev'
+    link: "https://vitejs.dev",
   },
   {
-    title: 'Java',
+    title: "Java",
     icon: <FaJava size={50} />,
-    link: 'https://www.java.com/'
+    link: "https://www.java.com/",
   },
   {
-    title: 'PHP',
+    title: "PHP",
     icon: <SiPhp size={50} />,
-    link: 'https://www.php.net/'
+    link: "https://www.php.net/",
   },
   {
-    title: 'CodeIgniter',
+    title: "CodeIgniter",
     icon: <SiCodeigniter size={50} />,
-    link: 'https://www.codeigniter.com/'
+    link: "https://www.codeigniter.com/",
   },
   {
-    title: 'Laravel',
+    title: "Laravel",
     icon: <FaLaravel size={50} />,
-    link: 'https://laravel.com/'
+    link: "https://laravel.com/",
   },
   {
-    title: 'AstroJS',
+    title: "AstroJS",
     icon: <SiAstro size={50} />,
-    link: 'https://astro.build/'
+    link: "https://astro.build/",
   },
   {
-    title: 'ExpressJS',
+    title: "ExpressJS",
     icon: <SiExpress size={50} />,
-    link: 'https://expressjs.com/'
+    link: "https://expressjs.com/",
   },
   {
-    title: 'MySql',
+    title: "MySql",
     icon: <SiMysql size={50} />,
-    link: 'https://www.mysql.com/'
+    link: "https://www.mysql.com/",
   },
   {
-    title: 'Supabase',
+    title: "Supabase",
     icon: <SiSupabase size={50} />,
-    link: 'https://supabase.com/'
+    link: "https://supabase.com/",
   },
   {
-    title: 'Chakra-UI',
+    title: "PostgreSql",
+    icon: <SiPostgresql size={50} />,
+    link: "https://www.postgresql.org/",
+  },
+  {
+    title: "MongoDb",
+    icon: <SiMongodb size={50} />,
+    link: "https://www.mongodb.com/",
+  },
+  {
+    title: "Chakra-UI",
     icon: <SiChakraui size={50} />,
-    link: 'https://supabase.com/'
+    link: "https://supabase.com/",
   },
   {
-    title: 'Bootstrap',
+    title: "Bootstrap",
     icon: <FaBootstrap size={50} />,
-    link: 'https://chakra-ui.com/'
+    link: "https://chakra-ui.com/",
   },
   {
-    title: 'Shadcn-UI',
+    title: "Shadcn-UI",
     icon: <SiShadcnui size={50} />,
-    link: 'https://ui.shadcn.com/'
+    link: "https://ui.shadcn.com/",
   },
   {
-    title: 'Git',
+    title: "Git",
     icon: <FaGitAlt size={50} />,
-    link: 'https://git-scm.com/'
+    link: "https://git-scm.com/",
   },
   {
-    title: 'Bootstrap',
-    icon: <FaBootstrap size={50} />,
-    link: 'https://getbootstrap.com/'
-  },
-  {
-    title: 'Python',
+    title: "Python",
     icon: <FaPython size={50} />,
-    link: 'https://www.python.org/downloads/'
+    link: "https://www.python.org/downloads/",
   },
   {
-    title: 'Turtle',
+    title: "Turtle",
     icon: <GiTurtle size={50} />,
-    link: 'https://docs.python.org/3/library/turtle.html/'
+    link: "https://docs.python.org/3/library/turtle.html/",
   },
   {
-    title: 'Bootstrap',
-    icon: <FaBootstrap size={50} />,
-    link: 'https://getbootstrap.com/'
-  },
-  {
-    title: 'Dart',
+    title: "Dart",
     icon: <SiDart size={50} />,
-    link: 'https://dart.dev/'
+    link: "https://dart.dev/",
   },
   {
-    title: 'Flutter',
+    title: "Flutter",
     icon: <SiFlutter size={50} />,
-    link: 'https://flutter.dev/'
+    link: "https://flutter.dev/",
   },
   {
-    title: 'Figma',
+    title: "Figma",
     icon: <FaFigma size={50} />,
-    link: 'https://www.figma.com/'
+    link: "https://www.figma.com/",
   },
   {
-    title: 'PremierePro',
+    title: "PremierePro",
     icon: <SiAdobepremierepro size={50} />,
-    link: 'https://www.adobe.com/id_id/products/premiere/free-trial-download.html'
+    link: "https://www.adobe.com/id_id/products/premiere/free-trial-download.html",
   },
-]
+];
 
 interface projects {
-  title: string
-  link: string
-  thumbnail: string
+  title: string;
+  link: string;
+  thumbnail: string;
 }
 
 export const projectItems: projects[] = [
@@ -241,28 +271,30 @@ export const projectItems: projects[] = [
     link: "https://aldipratama.vercel.app",
   },
   {
-    title: 'dyyAI',
-    thumbnail: '/project8.png',
-    link: 'https://ai-dyy.netlify.app',
-  }
-]
+    title: "dyyAI",
+    thumbnail: "/project8.png",
+    link: "https://ai-dyy.netlify.app",
+  },
+];
 
 interface mediaList {
-  icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>
-  link: string
+  icon: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
+  link: string;
 }
 
 export const mediaList: mediaList[] = [
   {
     icon: Github,
-    link: "https://github.com/aldiipratama"
+    link: "https://github.com/aldiipratama",
   },
   {
     icon: Instagram,
-    link: "https://instagram.com/alx.dyy"
+    link: "https://instagram.com/alx.dyy",
   },
   {
     icon: Linkedin,
-    link: "https://linkedin.com/in/aldi-pratama-a21b61295"
+    link: "https://linkedin.com/in/aldi-pratama-a21b61295",
   },
-]
+];
