@@ -5,13 +5,14 @@ import Image from "next/image";
 import { Badge } from "./ui/Badge";
 import { Quote } from "lucide-react";
 import { Typed1 } from "./ui/Typed";
-import { Spotlight } from "./ui/Spotlight";
 import { Separator } from "./ui/separator";
 
 export function Hero() {
   return (
-    <section id="home" className="overflow-x-hidden absolute top-0 w-full z-10">
-      <Spotlight />
+    <section
+      id="home"
+      className="overflow-hidden absolute top-0 w-full z-10 scroll-mt-20"
+    >
       <div className="flex justify-between max-sm:flex-col items-center px-2">
         <MotionDiv
           className="space-y-10 w-1/2 max-sm:w-full"

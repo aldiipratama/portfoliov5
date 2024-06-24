@@ -13,14 +13,14 @@ import { ReactNode, useRef } from "react";
 
 export const HeroParallax = ({
   products,
-  children
+  children,
 }: {
   products: {
     title: string;
     link: string;
     thumbnail: string;
-  }[],
-  children?: ReactNode
+  }[];
+  children?: ReactNode;
 }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
@@ -54,7 +54,7 @@ export const HeroParallax = ({
     springConfig
   );
   const translateY = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0, 650]),
+    useTransform(scrollYProgress, [0, 0.2], [0, 750]),
     springConfig
   );
   return (

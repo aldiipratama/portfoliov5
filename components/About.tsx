@@ -12,7 +12,7 @@ export const About = () => {
         </span>
         <Separator className="h-[1.5px] flex-1 dark:bg-indigo-500 bg-green-500"></Separator>
       </div>
-      <div className="flex mt-10 max-sm:flex-col max-sm:items-center max-sm:gap-5">
+      <div className="flex mt-10 max-sm:flex-col justify-center gap-40 max-sm:items-center max-sm:gap-5">
         <div className="max-w-sm space-y-4 max-sm:order-2">
           <p className="flex flex-col gap-4 text-justify">
             <span>Hello, i’m Aldipratama</span>
@@ -35,7 +35,7 @@ export const About = () => {
             </Button>
           </Link>
         </div>
-        <div className="mx-auto relative max-sm:order-1">
+        <div className="relative max-sm:order-1">
           <Image src="/2.png" alt="picture2" height={300} width={200} />
           <Separator className="h-[1.5px] flex-1 dark:bg-indigo-500 bg-green-500 absolute bottom-[0.3rem]" />
           <Separator

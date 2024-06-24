@@ -2,16 +2,9 @@
 
 import { ModeToggle } from "./ui/ModeToggle";
 import { Button } from "./ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "./ui/dropdown-menu";
-import { Menu, X } from "lucide-react";
-import { Link as RSLink } from "react-scroll";
 import Link from "next/link";
 import { navbarList } from "@/lib/constants";
+import { NavMobile } from "@/components/ui/NavMobile";
 
 export const Header = () => {
   return (
@@ -24,34 +17,7 @@ export const Header = () => {
         </Link>
         <div className="flex gap-4">
           <ModeToggle />
-          <div className={"lg:hidden flex items-center"}>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant={"link"} className="group p-0">
-                  <Menu className="group-data-[state=open]:hidden group-data-[state=closed]:block" />
-                  <X className="group-data-[state=closed]:hidden group-data-[state=open]:block" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className={"mr-14 mt-2"}>
-                {navbarList.map((navList, i) => (
-                  <DropdownMenuItem key={i}>
-                    <RSLink
-                      to={navList.link}
-                      className="w-full cursor-pointer"
-                      offset={-100}
-                    >
-                      <Button variant={"ghost"} className="hover:underline">
-                        <span className="dark:text-indigo-500 text-green-500">
-                          #
-                        </span>
-                        {navList.label}
-                      </Button>
-                    </RSLink>
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
-          </div>
+          <NavMobile navbarList={navbarList} />
           <ul className="flex gap-4 max-lg:hidden">
             {navbarList.map((navList, i) => (
               <li key={i}>
@@ -60,17 +26,12 @@ export const Header = () => {
                   className="hover:underline p-0 cursor-pointer"
                   asChild
                 >
-                  <RSLink
-                    to={navList.link}
-                    className="w-full"
-                    offset={-100}
-                    activeClass="active"
-                  >
+                  <Link href={`/#${navList.link}`}>
                     <span className="dark:text-indigo-500 text-green-500">
                       #
                     </span>
                     {navList.label}
-                  </RSLink>
+                  </Link>
                 </Button>
               </li>
             ))}
